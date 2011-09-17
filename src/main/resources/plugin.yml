@@ -1,0 +1,12 @@
+name: mmoInfoCompass
+main: mmo.Info.MMOInfoCompass
+version: 0.1
+website: http://forums.bukkit.org/threads/
+author: Rycochet <rycochet@rycochet.com>
+depend: [mmoCore,mmoInfo]
+
+description: Adds {compass} to the info tokens
+permissions:
+  mmo.info.compass:
+    description: Allows {compass} to show the current player direction
+    default: op
