@@ -27,10 +27,7 @@ import org.bukkit.event.Event.Priority;
 import org.bukkit.event.Event.Type;
 import org.bukkit.event.player.PlayerListener;
 import org.bukkit.event.player.PlayerMoveEvent;
-import org.getspout.spoutapi.gui.ContainerType;
-import org.getspout.spoutapi.gui.GenericContainer;
 import org.getspout.spoutapi.gui.GenericLabel;
-import org.getspout.spoutapi.gui.GenericTexture;
 import org.getspout.spoutapi.gui.Label;
 
 public class MMOInfoCompass extends MMOPlugin {
@@ -94,12 +91,14 @@ public class MMOInfoCompass extends MMOPlugin {
 	}
 
 	public String getCompass(Player player) {
-		int angle = (int) (((player.getLocation().getYaw() + 360 + 22.5) / 45) % 8) + 2;
-		String dirs = "W|N|E|S|W|N|";
-		return "" + ChatColor.DARK_GRAY + dirs.charAt(angle - 2)
+		int angle = (int) (((player.getLocation().getYaw() + 360 + 11.25) / 22.5) % 16) + 3;
+		String dirs = "|.|N|.|E|.|S|.|W|.|N|.";
+		return "" + ChatColor.DARK_GRAY + dirs.charAt(angle - 3)
+				  + ChatColor.DARK_GRAY + dirs.charAt(angle - 2)
 				  + ChatColor.GRAY + dirs.charAt(angle - 1)
 				  + ChatColor.WHITE + dirs.charAt(angle)
 				  + ChatColor.GRAY + dirs.charAt(angle + 1)
-				  + ChatColor.DARK_GRAY + dirs.charAt(angle + 2);
+				  + ChatColor.DARK_GRAY + dirs.charAt(angle + 2)
+				  + ChatColor.DARK_GRAY + dirs.charAt(angle + 3);
 	}
 }
