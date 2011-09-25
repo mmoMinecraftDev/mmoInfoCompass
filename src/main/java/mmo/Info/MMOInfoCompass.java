@@ -18,7 +18,7 @@ package mmo.Info;
 
 import java.util.BitSet;
 import java.util.HashMap;
-import mmo.Core.MMOListener;
+import mmo.CoreAPI.MMOListener;
 import mmo.Core.MMOPlugin;
 import mmo.InfoAPI.MMOInfoEvent;
 import org.bukkit.ChatColor;
