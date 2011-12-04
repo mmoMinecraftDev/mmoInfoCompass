@@ -29,6 +29,7 @@ import org.bukkit.event.player.PlayerListener;
 import org.bukkit.event.player.PlayerMoveEvent;
 import org.getspout.spoutapi.gui.GenericLabel;
 import org.getspout.spoutapi.gui.Label;
+import org.getspout.spoutapi.gui.WidgetAnchor;
 
 public class MMOInfoCompass extends MMOPlugin {
 
@@ -68,7 +69,7 @@ public class MMOInfoCompass extends MMOPlugin {
 						  if (event.isToken("compass")) {
 							  Player player = event.getPlayer();
 							  if (player.hasPermission("mmo.info.compass")) {
-								  Label label = (Label) new GenericLabel(getCompass(player)).setResize(true).setFixed(true);
+								  Label label = (Label) new GenericLabel(getCompass(player)).setFixed(true).setWidth(GenericLabel.getStringWidth("|.|W|.|")).setHeight(GenericLabel.getStringHeight("|"));
 								  widgets.put(player, label);
 								  event.setWidget(plugin, label);
 								  event.setIcon("compass.png");
