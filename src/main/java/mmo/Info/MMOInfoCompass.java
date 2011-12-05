@@ -69,7 +69,7 @@ public class MMOInfoCompass extends MMOPlugin {
 						  if (event.isToken("compass")) {
 							  Player player = event.getPlayer();
 							  if (player.hasPermission("mmo.info.compass")) {
-								  Label label = (Label) new GenericLabel(getCompass(player)).setFixed(true).setWidth(GenericLabel.getStringWidth("|.|W|.|")).setHeight(GenericLabel.getStringHeight("|"));
+								  Label label = (Label) new GenericLabel(getCompass(player)).setFixed(true).setWidth(GenericLabel.getStringWidth("|W|.|N|")).setHeight(GenericLabel.getStringHeight("|"));
 								  widgets.put(player, label);
 								  event.setWidget(plugin, label);
 								  event.setIcon("compass.png");
@@ -88,7 +88,7 @@ public class MMOInfoCompass extends MMOPlugin {
 
 	public String getCompass(Player player) {
 		int angle = (int) (((player.getLocation().getYaw() + 360 + 11.25) / 22.5) % 16) + 3;
-		String dirs = "|.|S|.|W|.|N|.|E|.|S|.";
+		String dirs = "|.|N|.|E|.|S|.|W|.|N|.";
 		return "" + ChatColor.DARK_GRAY + dirs.charAt(angle - 3)
 				  + ChatColor.DARK_GRAY + dirs.charAt(angle - 2)
 				  + ChatColor.GRAY + dirs.charAt(angle - 1)
