@@ -67,9 +67,7 @@ public class MMOInfoCompass extends MMOPlugin implements Listener {
 				Label label = (Label) new GenericLabel(getCompass(player)).setFixed(true).setWidth(GenericLabel.getStringWidth("|W|.|N|")).setHeight(GenericLabel.getStringHeight("|"));
 				widgets.put(player, label);
 				event.setWidget(plugin, label);
-				event.setIcon("compass.png");
-			} else {
-				event.setCancelled(true);
+				event.setIcon("compass.png");			
 			}
 		}
 	}
