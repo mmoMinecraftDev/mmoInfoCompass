@@ -72,11 +72,6 @@ public class MMOInfoCompass extends MMOPlugin implements Listener {
 		}
 	}
 
-	@EventHandler
-	public void onPlayerQuit(Player player) {
-		widgets.remove(player);
-	}
-
 	public String getCompass(Player player) {
 		int angle = (int) (((player.getLocation().getYaw() + 360 + 11.25) / 22.5) % 16) + 3;
 		// String dirs = "|.|N|.|E|.|S|.|W|.|N|.";
